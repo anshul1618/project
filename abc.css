@@ -1,0 +1,245 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+    overflow-x: hidden;
+}
+
+/* ================= ENTER SECTION ================= */
+.enter-section {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Enter {
+    height: 600px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Enter div {
+    width: 27%;
+    height: 0;
+
+    position: absolute;
+}
+
+/* bottom → top */
+.e1 {
+    left: 0;
+    bottom: 0;
+    transform: skewX(-17deg);
+    transform-origin: left bottom;
+    background: red;
+    box-shadow: 0 0 50px #000;
+    animation: grow-height .5s linear forwards;
+    animation-delay: .5s;
+}
+
+/* right → left */
+.e2 {
+    height: 0;
+    width: 33.33%;
+    top: 50%;
+    left: 100%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    background: rgb(129, 9, 9);
+    box-shadow: 0 0 50px #000;
+    animation: grow-height .5s linear forwards;
+    animation-delay: 1.5s;
+    position: absolute;
+}
+
+
+.e3 {
+    right: 36.5%;
+    top: 0%;
+
+    transform: skewX(17deg);
+    transform-origin: top left;
+
+    background: rgb(183, 8, 8);
+    box-shadow: 0 0 50px #000;
+
+    animation: grow-height .5s linear forwards;
+    animation-delay: 1s;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes grow-height {
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes grow-width {
+    from {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* ================= NAVBAR ================= */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(183, 8, 8);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    transition: .3s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(183, 8, 8);
+}
+
+/* ================= HOME ================= */
+.home {
+
+    min-height: 100vh;
+    padding: 10% 12%;
+    color: white;
+    display: flex;
+
+}
+
+.home-info {
+    margin-top: 10%;
+}
+
+.home h1 {
+    font-size: 48px;
+}
+
+.home h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.home p {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 10px 30px;
+    background: rgb(183, 8, 8);
+    color: #1f242d;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: transparent;
+    color: rgb(183, 8, 8);
+    border: 2px solid rgb(183, 8, 8);
+}
+
+.btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.sci a {
+    display: inline-flex;
+    margin-left: 15px;
+    padding: 8px;
+    border: 2px solid rgb(183, 8, 8);
+    border-radius: 50%;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: rgb(183, 8, 8);
+    color: #1f242d;
+    box-shadow: 0 0 10px rgb(183, 8, 8);
+}
+
+/* ===========================*/
+
+.img-box {
+
+    margin-left: 35%;
+    margin-top: 10%;
+    width: 28vw;
+    height: 28vw;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.img-item img {
+
+    position: absolute;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 15%;
+    color: white;
+    display: flex;
+}
